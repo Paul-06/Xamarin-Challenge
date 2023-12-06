@@ -17,10 +17,10 @@
                 <Image Source="senati.png" Aspect="AspectFit" HeightRequest="200" HorizontalOptions="CenterAndExpand" Margin="10"/>
 
                 <!-- Título y Descripción -->
-                <Label Text="Bienvenido a Xamarin Challenge" FontSize="24" HorizontalOptions="CenterAndExpand" Margin="10"/>
+                <Label Text="Bienvenido a Xamarin Challenge" FontSize="24" HorizontalOptions="CenterAndExpand" Margin="10" TextColor="Black"/>
 
                 <Label Text="Desliza hacia la derecha o toca el ícono de la barra lateral para seleccionar una subaplicación." 
-                HorizontalOptions="CenterAndExpand" Margin="10"/>
+                HorizontalOptions="CenterAndExpand" Margin="10" TextColor="Black"/>
 
                 <!-- Agregar más contenido aquí -->
             </StackLayout>
@@ -29,7 +29,7 @@
             <BoxView Grid.Row="1" HeightRequest="5" BackgroundColor="LightGray" HorizontalOptions="FillAndExpand"/>
             <StackLayout Grid.Row="1" Padding="10" BackgroundColor="White">
                 <!-- Cambia el fondo a blanco -->
-                <Label Text="Hecho por Jean Paul Vasquez" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Hecho por Jean Paul Vasquez" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

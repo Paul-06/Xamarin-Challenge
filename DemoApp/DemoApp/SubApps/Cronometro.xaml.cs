@@ -44,7 +44,7 @@ namespace DemoApp.SubApps
             {
                 timer.Stop(); // Detiene el temporizador
                 cronometroEnEjecucion = false; // Cambia la bandera a falso, el cronómetro se detiene
-                iniciarDetenerButton.Text = "Iniciar"; // Cambia el texto del botón a "Iniciar"
+                iniciarDetenerButton.Text = "Reanudar"; // Cambia el texto del botón a "Iniciar"
             }
             else
             {
