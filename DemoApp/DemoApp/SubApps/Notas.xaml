@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoApp.SubApps.Notas">
+    <ContentPage.Content>
+
+        <!-- Un StackLayout para organizar los elementos de la página -->
+        <StackLayout>
+            <!-- Título de la página -->
+            <Label Text="Mis Notas" FontAttributes="Bold" FontSize="24" TextColor="#007AFF" HorizontalOptions="CenterAndExpand" Margin="0,10,0,20"/>
+
+            <!-- Un ScrollView que permite desplazarse por la lista de notas -->
+            <ScrollView>
+                <!-- Un ListView llamado "NotesList" que muestra una lista de notas -->
+                <ListView x:Name="NotesList" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <!-- Acciones contextuales en un ViewCell (como un botón de eliminación) -->
+                                <ViewCell.ContextActions>
+                                    <MenuItem
+                                        x:Name="BtnDelete"
+                                        Text="Eliminar"
+                                        IsDestructive="True"
+                                        Clicked="BtnDelete_Clicked"
+                                        CommandParameter="{Binding .}"/>
+                                </ViewCell.ContextActions>
+                                <!-- Un StackLayout que contiene el contenido de cada celda de la lista -->
+                                <StackLayout Padding="15, 15">
+                                    <!-- Un Label que muestra la descripción de la nota -->
+                                    <Label Text="{Binding Description}"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+
+            <!-- Una entrada de texto (Entry) para agregar nuevas notas -->
+            <Entry x:Name="NuevaNotaEntry" Placeholder="+ Agregar nota" ReturnType="Done" Completed="OnAgregarNotaClicked" 
+               BackgroundColor="Transparent" Margin="15, 15"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

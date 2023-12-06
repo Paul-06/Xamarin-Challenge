@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoApp.Master"
+             Title="Master">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" WidthRequest="100">
+            <!-- Establecer un color de fondo a todos los botones -->
+            <StackLayout.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="BackgroundColor" Value="LightBlue"/>
+                    <Setter Property="Margin" Value="10, 5"/>
+                </Style>
+            </StackLayout.Resources>
+            <!-- Botones -->
+            <Button Text="Calculadora" x:Name="btnCalculadora" Margin="10, 10, 10, 0" Clicked="btnCalculadora_Clicked"/>
+            <Button Text="Conversor" x:Name="btnConversor" Clicked="btnConversor_Clicked"/>
+            <Button Text="Cronómetro" x:Name="btnCronometro" Clicked="btnCronometro_Clicked"/>
+            <Button Text="Galería" x:Name="btnGaleria" Clicked="btnGaleria_Clicked"/>
+            <Button Text="Notas" x:Name="btnNotas" Clicked="btnNotas_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Define una página de contenido en XAML -->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoApp.SubApps.Galeria">
+    <!-- Utiliza un CollectionView para mostrar una colección de elementos -->
+    <CollectionView ItemsSource="{Binding ImageList}" SelectionMode="None">
+        <!-- Define la disposición de los elementos dentro del CollectionView como una cuadrícula (Grid) con 2 columnas -->
+        <CollectionView.ItemsLayout>
+            <GridItemsLayout Orientation="Vertical" Span="2" />
+        </CollectionView.ItemsLayout>
+        <!-- Define cómo se mostrará cada elemento en la colección -->
+        <CollectionView.ItemTemplate>
+            <!-- Utiliza un DataTemplate para personalizar la apariencia de cada elemento -->
+            <DataTemplate>
+                <!-- Muestra una imagen en el DataTemplate -->
+                <Image Source="{Binding ImageSource}" Aspect="AspectFill" HeightRequest="150" />
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

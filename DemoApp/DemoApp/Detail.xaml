@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoApp.Detail">
+    <ContentPage.Content>
+        <Grid>
+            <!-- Contenido Principal -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <!-- Contenido principal ocupará todo el espacio disponible -->
+                <RowDefinition Height="Auto" />
+                <!-- Espacio para el pie de página -->
+            </Grid.RowDefinitions>
+
+            <StackLayout>
+                <!-- Imagen Destacada -->
+                <Image Source="senati.png" Aspect="AspectFit" HeightRequest="200" HorizontalOptions="CenterAndExpand" Margin="10"/>
+
+                <!-- Título y Descripción -->
+                <Label Text="Bienvenido a Xamarin Challenge" FontSize="24" HorizontalOptions="CenterAndExpand" Margin="10"/>
+
+                <Label Text="Desliza hacia la derecha o toca el ícono de la barra lateral para seleccionar una subaplicación." 
+                HorizontalOptions="CenterAndExpand" Margin="10"/>
+
+                <!-- Agregar más contenido aquí -->
+            </StackLayout>
+
+            <!-- Pie de Página -->
+            <BoxView Grid.Row="1" HeightRequest="5" BackgroundColor="LightGray" HorizontalOptions="FillAndExpand"/>
+            <StackLayout Grid.Row="1" Padding="10" BackgroundColor="White">
+                <!-- Cambia el fondo a blanco -->
+                <Label Text="Hecho por Jean Paul Vasquez" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

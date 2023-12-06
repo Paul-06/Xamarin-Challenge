@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoApp.SubApps.Conversor">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <!-- Un StackLayout para organizar los elementos en una disposición vertical con margen -->
+            <Label Text="Conversor de Unidades" FontSize="20" HorizontalOptions="CenterAndExpand" />
+            <!-- Un Label para mostrar el título "Conversor de Unidades" con un tamaño de fuente de 20 y centrado horizontalmente -->
+
+            <Entry x:Name="inputValueEntry" Placeholder="Ingrese valor numérico" Keyboard="Numeric" Margin="0,10,0,10" />
+            <!-- Un Entry (cuadro de entrada) que permite al usuario ingresar un valor numérico. 
+                 Tiene un teclado numérico y un marcador de posición que dice "Ingrese valor numérico". 
+                 También tiene un margen en la parte superior e inferior para separarlo de otros elementos -->
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <!-- Otro StackLayout que organiza elementos en una disposición horizontal con margen -->
+                <Picker x:Name="fromUnitPicker" Title="De" HorizontalOptions="FillAndExpand">
+                    <!-- Un Picker (lista desplegable) llamado fromUnitPicker que permite al usuario seleccionar la unidad de origen.
+                         Tiene un título "De" y se expande horizontalmente para ocupar el espacio disponible. -->
+                    <Picker.ItemsSource>
+                        <!-- Define las opciones de la lista desplegable -->
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Celsius</x:String>
+                            <x:String>Fahrenheit</x:String>
+                            <x:String>Kelvin</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Label Text="a" VerticalOptions="CenterAndExpand" />
+                <!-- Un Label que muestra el texto "a" para indicar la dirección de la conversión -->
+                <Picker x:Name="toUnitPicker" Title="A" HorizontalOptions="FillAndExpand">
+                    <!-- Un Picker (lista desplegable) llamado toUnitPicker que permite al usuario seleccionar la unidad de destino.
+                         Tiene un título "A" y se expande horizontalmente para ocupar el espacio disponible. -->
+                    <Picker.ItemsSource>
+                        <!-- Define las opciones de la lista desplegable -->
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Celsius</x:String>
+                            <x:String>Fahrenheit</x:String>
+                            <x:String>Kelvin</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+
+            <Button Text="Convertir" Clicked="ConvertButton_Clicked" BackgroundColor="#007acc" TextColor="White" CornerRadius="5" Margin="0,20,0,0" />
+            <!-- Un botón llamado "Convertir" con un color de fondo azul, texto blanco y esquinas redondeadas. 
+                 Cuando se hace clic en este botón, se llama al evento "ConvertButton_Clicked". -->
+
+            <Label x:Name="resultLabel" Text="" FontSize="18" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0" />
+            <!-- Un Label llamado resultLabel que mostrará el resultado de la conversión con un tamaño de fuente de 18 y centrado horizontalmente.
+                 Tiene un margen en la parte superior para separarlo del botón. Inicialmente, el texto está vacío. -->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

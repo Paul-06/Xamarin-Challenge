@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoApp.SubApps.Cronometro">
+
+    <!-- Define una página de contenido con el nombre Cronometro y utiliza el espacio de nombres de Xamarin.Forms -->
+
+    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <!-- Crea un diseño apilado que centra su contenido vertical y horizontalmente -->
+
+        <Label x:Name="cronometroLabel" Text="00:00:00" FontSize="36" TextColor="Black" />
+        <!-- Crea una etiqueta (Label) con un nombre de identificación (cronometroLabel) que muestra el tiempo transcurrido -->
+        <!-- Configura el texto inicial como "00:00:00", el tamaño de fuente y el color del texto -->
+
+        <Button x:Name="iniciarDetenerButton" Text="Iniciar" Clicked="OnIniciarDetenerClicked" BackgroundColor="#007AFF" TextColor="White" CornerRadius="10" HeightRequest="50" WidthRequest="100" Margin="0,20,0,0" />
+        <!-- Crea un botón (Button) con un nombre de identificación (iniciarDetenerButton) -->
+        <!-- Configura el texto inicial como "Iniciar", el color de fondo, el color del texto, el radio de borde y las dimensiones -->
+        <!-- Asocia el evento Clicked a la función OnIniciarDetenerClicked -->
+
+        <Button x:Name="resetButton" Text="Reiniciar" Clicked="OnResetClicked" BackgroundColor="#FF3B30" TextColor="White" CornerRadius="10" HeightRequest="50" WidthRequest="100" Margin="0,10,0,0" />
+        <!-- Crea otro botón (Button) con un nombre de identificación (resetButton) -->
+        <!-- Configura el texto inicial como "Reset", el color de fondo, el color del texto, el radio de borde y las dimensiones -->
+        <!-- Asocia el evento Clicked a la función OnResetClicked -->
+    </StackLayout>
+</ContentPage>
